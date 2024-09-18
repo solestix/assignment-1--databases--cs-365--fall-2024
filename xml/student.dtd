@@ -1,0 +1,37 @@
+<!-- ===================================================================
+  The root element: students
+
+  The students container (root) element must contain one or more
+  student-id elements, represented by the + character.
+  ================================================================== -->
+<!ELEMENT students (student-id)+>
+
+<!-- ===================================================================
+  The student-id container element must include one first name, zero or
+  more middle names, one last name, one preferred name, one email, one
+  phone, one year, one gpa, one major, zero or more minors, one status,
+  one advisor, one enrollment-date, and one graduation date.
+  ================================================================== -->
+<!ELEMENT student-id (first-name,middle-name*,last-name,preferred-name?,
+                      email,phone,year,gpa,major,minor*,status,advisor,
+                      enrollment-date,graduation-date)>
+<!ELEMENT first-name (#PCDATA)>
+<!ELEMENT middle-name (#PCDATA)>
+<!ELEMENT last-name (#PCDATA)>
+<!ELEMENT preferred-name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT gpa (#PCDATA)>
+<!ELEMENT major (#PCDATA)>
+<!ELEMENT minor (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT advisor (#PCDATA)>
+<!ELEMENT enrollment-date (#PCDATA)>
+<!ELEMENT graduation-date (#PCDATA)>
+
+<!-- ===================================================================
+  The student-id number attribute must be a number.
+  ================================================================== -->
+<!ATTLIST student-id
+          number CDATA #REQUIRED>

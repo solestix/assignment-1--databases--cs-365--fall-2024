@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,500;1,6..12,200;1,6..12,500&display=swap');
+
+:root,
+:root::before,
+student-id {
+  display: block;
+}
+
+:root {
+  margin: 0 auto;
+  width: 1200px;
+  font: 200 16px 'Nunito Sans', serif;
+}
+
+:root::before {
+  content: 'Students';
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 24px 0;
+}
+
+student-id {
+  margin-bottom: 15px;
+}
+
+student-id:hover {
+  background-color: #f0f0f0;
+}
+
+student-id::before {
+  content:attr(number);
+  font-weight: bold;
+}
+
+first-name, middle-name, last-name, preferred-name{
+  display: block;
+}
+
+first-name {
+  font-weight: bold;
+}
+
+middle-name {
+  font-weight: bold;
+}
+
+last-name {
+  font-weight: bold;
+}
+
+preferred-name {
+  font-style: italic;
+  color: #555;
+}
+
+preferred-name, email, phone, year, gpa, major, minor, status, advisor, enrollment-date, graduation-date {
+  display: block;
+  margin: 5px 0;
+}
+
+email {
+  color: #007bff;
+  text-decoration: none;
+}
+
+email:hover {
+  text-decoration: underline;
+}
+
+.phone {
+  color: #666;
+}
